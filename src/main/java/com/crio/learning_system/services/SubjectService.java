@@ -15,6 +15,7 @@ import java.util.UUID;
 
 @Service
 public class SubjectService {
+    @Autowired
     private final SubjectRepository subjectRepository;
     @Autowired
     private ModelMapper modelMapper;
