@@ -10,6 +10,7 @@ import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @EqualsAndHashCode(callSuper = true, exclude = {"registeredStudents"})
@@ -22,5 +23,5 @@ public class Subject extends BaseEntity{
 
     @ManyToMany
     @JsonManagedReference
-    private Set<Student> registeredStudents;
+    private Set<Student> registeredStudents = new HashSet<>();
 }
